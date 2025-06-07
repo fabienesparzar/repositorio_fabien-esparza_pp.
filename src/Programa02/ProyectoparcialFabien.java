@@ -1,10 +1,11 @@
-package programa02;
+package Programa02;
 
 import java.util.Scanner;
 
 public class ProyectoparcialFabien {
     public static void main(String[] args) {
         // Declarar variables
+        String codigoEmpleado;
         String nombre;
         int horasTrabajadas;
         double tarifaHora, sueldoBruto, descuento, sueldoNeto;
@@ -13,6 +14,9 @@ public class ProyectoparcialFabien {
         Scanner lectura = new Scanner(System.in);
 
         // Entrada de datos
+        System.out.print("Ingresar código del empleado: ");
+        codigoEmpleado = lectura.nextLine();
+
         System.out.print("Ingresar nombre del empleado: ");
         nombre = lectura.nextLine();
 
@@ -28,7 +32,9 @@ public class ProyectoparcialFabien {
         sueldoNeto = sueldoBruto - descuento;
 
         // Salida
-        System.out.println("\nResumen de Pago para " + nombre + ":");
+        System.out.println("\nResumen de Pago:");
+        System.out.println("Código: " + codigoEmpleado);
+        System.out.println("Empleado: " + nombre);
         System.out.printf("Sueldo Bruto: S/ %.2f%n", sueldoBruto);
         System.out.printf("Descuento ONP (13%%): S/ %.2f%n", descuento);
         System.out.printf("Sueldo Neto: S/ %.2f%n", sueldoNeto);
@@ -37,3 +43,4 @@ public class ProyectoparcialFabien {
         lectura.close();
     }
 }
+
